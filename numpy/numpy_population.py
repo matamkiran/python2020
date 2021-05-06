@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb  3 20:40:19 2021
+
+@author: Divya
+"""
+import numpy as np
+dt = np.dtype([('country',  np.unicode, 20), ('density', 'i4'), ('area', 'i4'), ('population', 'i4')])
+population_table = np.array([
+    ('Netherlands', 393, 41526, 16928800),
+    ('Belgium', 337, 30510, 11007020),
+    ('United Kingdom', 256, 243610, 62262000),
+    ('Germany', 233, 357021, 81799600),
+    ('Liechtenstein', 205, 160, 32842),
+    ('Italy', 192, 301230, 59715625),
+    ('Switzerland', 177, 41290, 7301994),
+    ('Luxembourg', 173, 2586, 512000),
+    ('France', 111, 547030, 63601002),
+    ('Austria', 97, 83858, 8169929),
+    ('Greece', 81, 131940, 11606813),
+    ('Ireland', 65, 70280, 4581269),
+    ('Sweden', 20, 449964, 9515744),
+    ('Finland', 16, 338424, 5410233),
+    ('Norway', 13, 385252, 5033675)],
+    dtype=dt)
+print(population_table[2:4])
+
+np.savetxt("population_numpy_080221.csv",population_table,
+           fmt="%s;%d;%d;%d",delimiter=";")
+
