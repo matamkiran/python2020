@@ -1,0 +1,10 @@
+a={"name":"mampi","skill":"python",
+   "city":"jarkhand"}
+print(type(a))
+print(a)
+print(a.keys())
+print(a.values())
+a.popitem()
+print(a)
+print(a["name"])
+print(a["city"])
