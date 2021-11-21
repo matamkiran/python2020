@@ -17,6 +17,7 @@ frozenset()
 sorted(a)
 type(a)
 range(0,100,10)
+bin(100) # to find binary digit of given number
 
 
 len(a)
